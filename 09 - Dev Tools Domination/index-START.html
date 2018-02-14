@@ -18,28 +18,63 @@
     }
 
     // Regular
+    console.log('hello')
 
     // Interpolated
+    console.log('hello my name is Austin I am a %s', 'poop')
 
     // Styled
-
+    console.log('%c hello from mars', 'font-size: 40px; color: red')
     // warning!
+    console.warn("don't do it")
 
     // Error :|
+    console.error('ERRRRRORRR')
 
     // Info
+    console.info('People eat a lot of fast food')
 
     // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('ouch'), 'That is wrong')
 
     // clearing
+    // console.clear()
 
     // Viewing DOM Elements
+    console.dir(p)
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.group('dogs')
+      console.log('Meet ' + dog.name)
+      console.log(`${dog.name} is ${dog.age} years old`)
+      console.groupEnd('dogs')
+    })
 
     // counting
+    console.count('pizza')
+    console.count('pizza')
+    console.count('pizza')
+    console.count('pizza')
+    console.count('pineapple')
+    console.count('pineapple')
+    console.count('pizza')
+    console.count('pizza')
+    console.count('pineapple')
+    console.count('pizza')
+    console.count('pineapple')
+
+
 
     // timing
+     console.time('time')
+    dogs.forEach(dog => {
+      dog.age++
+      console.log(dog.age)
+    })
+    console.timeEnd('time')
 
   </script>
 </body>
