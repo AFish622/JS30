@@ -103,12 +103,20 @@
 
   let lastChecked;
 
-  const handleCheck = event => {
+  function handleCheck(event) {
     //check if they have the shift key down and the button is checked
     let inBetween = false;
     if (event.shiftKey && this.checked) {
       checkboxes.forEach(checkbox => {
         console.log(checkbox)
+        if (checkbox == this || checkbox == lastChecked) {
+          inBetween = !inBetween;
+          console.log('starting to check')
+        }
+
+        if (inBetween) {
+          checkbox.checked = true;
+        }
       })
     }
 
